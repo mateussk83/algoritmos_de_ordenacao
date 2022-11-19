@@ -5,11 +5,11 @@ timeinsert = []
 timeMerge = []
 
 #abrindo os arquivos de resultados de inserção
-resultsinsert500 = open('resultsinsert500.txt') 
-resultsinsert5000 = open('resultsinsert5000.txt') 
-resultsinsert10000 = open('resultsinsert10000.txt') 
-resultsinsert20000 = open('resultsinsert20000.txt') 
-resultsinsert50000 = open('resultsinsert50000.txt') 
+resultsinsert500 = open('a.out-Insert500.txt') 
+resultsinsert5000 = open('a.out-Insert5000.txt') 
+resultsinsert10000 = open('a.out-Insert10000.txt') 
+resultsinsert20000 = open('a.out-Insert20000.txt') 
+resultsinsert50000 = open('a.out-Insert50000.txt') 
 
 #pegando a primeira linha que tem o tempo
 content500 = resultsinsert500.readlines()
@@ -37,11 +37,11 @@ value50000 = round(float(str(value50000).replace("tempo:","")),2)
 timeinsert.append(value50000 * 1000)
 
 #abrindo os arquivos de resultados de Merge
-resultsMerge500 = open('resultsMerge500.txt') 
-resultsMerge5000 = open('resultsMerge5000.txt') 
-resultsMerge10000 = open('resultsMerge10000.txt') 
-resultsMerge20000 = open('resultsMerge20000.txt') 
-resultsMerge50000 = open('resultsMerge50000.txt') 
+resultsMerge500 = open('a.out-Merge500.txt') 
+resultsMerge5000 = open('a.out-Merge5000.txt') 
+resultsMerge10000 = open('a.out-Merge10000.txt') 
+resultsMerge20000 = open('a.out-Merge20000.txt') 
+resultsMerge50000 = open('a.out-Merge50000.txt') 
 
 #pegando a primeira linha que tem o tempo
 content500 = resultsMerge500.readlines()
