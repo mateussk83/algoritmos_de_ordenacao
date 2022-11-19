@@ -17,12 +17,13 @@ def algoritmoInsercao(arr):
 		arr[j+1] = key
 
 arrNumber = []
-inicio = time.time()
 
 
 
 # abrindo arquivo numbers.txt
 with open('a.in-500.txt', 'r') as arquivo:
+    inicio = 0
+    fim = 0
     arquivo = arquivo.read()
     arr = arquivo.split()
     n = len(arr)
@@ -35,18 +36,16 @@ with open('a.in-500.txt', 'r') as arquivo:
     print("\n\nArray Desordenado: ")
     for i in range(n):
         print("%d" % arrNumber[i], end=" ")
-        
+    inicio = time.time()
     #chamando função algoritmo de Inserção
     algoritmoInsercao(arrNumber)
-    
+    fim = time.time()
     #mostrando o array desordenado 
     print("\n\nArray Ordernado: ")
     for i in range(n):
         print("%d" % arrNumber[i], end=" ")
 
 
-fim = time.time()
-print("\n\ntempo:" + str(fim - inicio))
 
 #Criando resultsInsercao
 results = open("a.out-Insert500.txt", "w")

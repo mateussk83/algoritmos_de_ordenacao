@@ -42,10 +42,12 @@ def mergeSort(myList):
 
 arrNumber = []
 
-inicio = time.time()
 
 
 with open('a.in-500.txt', 'r') as arquivo:
+    
+    inicio = 0
+    fim = 0
     arquivo = arquivo.read()
     arr = arquivo.split()
     n = len(arr)
@@ -55,15 +57,13 @@ with open('a.in-500.txt', 'r') as arquivo:
     print("\n\nArray Desordenado: ")
     for i in range(n):
         print("%d" % arrNumber[i], end=" ")
-
+    inicio = time.time()
     mergeSort(arrNumber)
-
+    fim = time.time()
     print("\n\nArray Ordernado: ")
     for i in range(n):
         print("%d" % arrNumber[i], end=" ")
 
-fim = time.time()
-print("\n\ntempo:" + str(fim - inicio))
 results = open("a.out-Merge500.txt", "w")
 
 results.write("tempo:" + str(fim - inicio))
