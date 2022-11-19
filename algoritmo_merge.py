@@ -1,5 +1,9 @@
 import time
 # algoritmo de intercalação
+
+numbers = [500, 5000, 10000, 20000, 50000]
+
+
 def mergeSort(myList):
     if len(myList) > 1:
         mid = len(myList) // 2
@@ -40,34 +44,40 @@ def mergeSort(myList):
             j += 1
             k += 1
 
-arrNumber = []
 
-inicio = time.time()
+def orderNumbers(number):
+         
+    # abrindo arquivo numbers.txt
+    with open('a.in-'+str(number)+'.txt', 'r') as arquivo:
+
+        fim = 0
+        inicio = 0
+        arrNumber = []
+        arquivo = arquivo.read()
+        arr = arquivo.split()
+        n = len(arr)
+
+        for num in arr:
+            arrNumber.append(int(num))
+
+        print("\n\nArray Desordenado: ")
+        for i in range(n):
+            print("%d" % arrNumber[i], end=" ")
+
+        inicio = time.time()
+        mergeSort(arrNumber)
+
+        fim = time.time()
+        print("\n\nArray Ordernado: ")
+        for i in range(n):
+            print("%d" % arrNumber[i], end=" ")
+
+    results = open('a.out-Merge'+str(number)+'.txt', "w")
+
+    results.write("tempo:" + str(fim - inicio))
+    results.write("\n\n" + str(arrNumber).replace("[", "").replace("]", "").replace(",", ""))
+    results.close()
 
 
-with open('a.in-500.txt', 'r') as arquivo:
-    arquivo = arquivo.read()
-    arr = arquivo.split()
-    n = len(arr)
-    for num in arr:
-        arrNumber.append(int(num))
-
-    print("\n\nArray Desordenado: ")
-    for i in range(n):
-        print("%d" % arrNumber[i], end=" ")
-
-    mergeSort(arrNumber)
-
-    print("\n\nArray Ordernado: ")
-    for i in range(n):
-        print("%d" % arrNumber[i], end=" ")
-
-fim = time.time()
-print("\n\ntempo:" + str(fim - inicio))
-results = open("a.out-Merge500.txt", "w")
-
-results.write("tempo:" + str(fim - inicio))
-results.write("\n\n" + str(arrNumber).replace("[", "").replace("]", "").replace(",", ""))
-results.close()
-
-
+for num in numbers:
+    orderNumbers(num)
