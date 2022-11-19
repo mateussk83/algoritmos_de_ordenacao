@@ -74,7 +74,7 @@ plt.plot(palavras, timeMerge, label="Algoritmo de Intercalação" )
 plt.legend()
 plt.ylabel('Tempo(ms)',color='red')
 plt.xlabel('Números',color='blue')
-plt.axis(ymin=0, ymax=2000)
+plt.axis(ymin=0, ymax=180000)
 plt.title('Comparação de Ordenação')
 plt.show()
 

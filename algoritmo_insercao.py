@@ -6,17 +6,20 @@ numbers = [500, 5000, 10000, 20000, 50000]
 
 
 def algoritmoInsercao(arr):
-    n = len(arr)
-    # Percorre o arranjo A.
-    for j in range(1, n):
-        chave = arr[j]
-        i = j - 1
-        # Insere o elemento A[j] na posição correta.
-        while i >= 0 and arr[i] > chave:
-            arr[i + 1] = arr[i]
-            i = i - 1
-        arr[i + 1] = chave
+ 
+	# Percorra de 1 até o número de casas que tem em len
+	for i in range(1, len(arr)):
 
+		key = arr[i]
+
+		# Mova elementos de arr[0..i-1], que são
+        # maior que chave, para uma posição à frente
+        # de sua posição atual
+		j = i-1
+		while j >=0 and key < arr[j] :
+				arr[j+1] = arr[j]
+				j -= 1
+		arr[j+1] = key
 
 def orderNumbers(number):
 
