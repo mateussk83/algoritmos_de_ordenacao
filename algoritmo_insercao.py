@@ -1,3 +1,11 @@
+# Alunos:
+# Mateus Garcia Santos                RA: F208613
+# Matheus Vinicius                    RA: F339475
+# Guilherme Akio Ochi Ra              RA: N589F3
+# Gabriele Cristine da Silva Casari   RA: F0865C0
+# Henrique Thomas Correa Alonso       RA: N574HD0
+# Thiado de Paula Souza               RA: F33jic8
+
 import time
 # Função do Algoritmo de Inserção
 
